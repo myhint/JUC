@@ -1,7 +1,10 @@
-package example.exercise.producerconsumer.demo;
+package example.exercise.producerconsumer.demo.synchronize;
 
 /**
  * @Description 生产者和消费者 & 虚假唤醒解决方案
+ * <p>
+ * ==> synchronized 实现线程同步，等待与唤醒
+ * <p>
  * ===> 需要考虑的问题：
  * ===> 1）等待&唤醒 机制的使用
  * ===> 2）线程同步 -- synchronized关键字使用同步代码块或者同步方法 | Lock 同步锁
