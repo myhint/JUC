@@ -1,7 +1,7 @@
-package example.exercise;
+package example.exercise.thread.eight.lock;
 
 /**
- * @Description 线程八锁
+ * @Description 线程八锁系列
  * <p>
  * 题目：判断打印的 "one" or "two" ？
  * <p>
@@ -15,6 +15,7 @@ package example.exercise;
  * 8. 两个静态同步方法，两个 Number 对象?   //one  two
  * <p>
  * 线程八锁的关键：
+ * <p>
  * ①非静态方法的锁默认为 this,  静态方法的锁为 对应当前的 Class实例
  * ②某一个时刻内，只能有一个线程持有锁，无论几个方法。
  * @Author blake
