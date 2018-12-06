@@ -1,6 +1,5 @@
 package example.exercise.threadpool;
 
-import com.sun.jmx.remote.internal.ArrayQueue;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.Callable;
@@ -22,7 +21,6 @@ public class ThreadPoolTest {
         // 按照给定配置项，初始化线程池
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5, 10, 3000, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(5));
 
-
         for (int i = 0; i < 10; i++) {
 
             FutureTask<Integer> integerFutureTask = new FutureTask<Integer>(new Callable<Integer>() {
@@ -42,7 +40,6 @@ public class ThreadPoolTest {
             });
 
             threadPoolExecutor.execute(integerFutureTask);
-
         }
 
         System.out.println(threadPoolExecutor);
@@ -51,7 +48,6 @@ public class ThreadPoolTest {
 
         // 关闭线程池
         threadPoolExecutor.shutdown();
-
     }
 
 }
